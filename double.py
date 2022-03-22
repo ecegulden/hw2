@@ -1,13 +1,12 @@
 
+#doubler definition
 def doubler(func):
     def wrapper():
-        return wrapper
+        x= func()*2
+        return x
         
-@doubler  
-def foofoo(n):
-    return n*2
-
-n=int(input("Enter:"))
-    
-print(doubler(foofoo))
-
+    return wrapper
+@doubler
+def numres():
+    return 10
+print(numres())
