@@ -1,17 +1,16 @@
 #Create function called
-def func_counter(n):  
-    def wrapper(y):
-        #variable to track the number of times the function being decorated is called.
-        wrapper.counter += 1
-        return n
-    wrapper.counter = 0
-    return wrapper
+def func_counter(f): 
+    def wrapped(y):
+        wrapped.counter+= 1
+        return f
+    wrapped.counter = 0
+    return wrapped
 
-@func_counter  
+@func_counter 
 def foo(y):
     return y+2**3-34
     
-y=int(input("Enter a number:")) 
+y=int(input("Enter:")) 
 foo(y)
 foo(y) 
 
