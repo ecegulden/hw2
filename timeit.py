@@ -1,12 +1,10 @@
 import time
 
 
-#starting the fuction calculate_time
-
 def calculate_time(func):
     def wrapper():
-        start= time.time()
+        starting = time.time()
         func()
-        end = time.time()
-        print ("Total Time:", end-start)
+        ending = time.time()
+        print ('Total Time:', ending - starting)
     return wrapper
