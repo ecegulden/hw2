@@ -2,11 +2,6 @@
 #doubler definition
 def doubler(func):
     def wrapper():
-        x= func()*2
-        return x
-        
+        func()
+        func()
     return wrapper
-@doubler
-def numres():
-    return 10
-print(numres())
