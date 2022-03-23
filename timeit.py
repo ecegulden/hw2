@@ -8,5 +8,5 @@ def calculate_time(func):
         start= time.time()
         func()
         end = time.time()
-        print ("Total Time:, end-start)
+        print ("Total Time:", end-start)
     return wrapper
